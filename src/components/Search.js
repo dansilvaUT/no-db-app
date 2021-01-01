@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Character from './Character';
 import axios from 'axios';
+import './Search.css';
 
 class Search extends Component {
     constructor() {
@@ -25,7 +26,7 @@ class Search extends Component {
         return (
             <section>
                 {this.state.isLoading ?
-                    <div>Searching.....</div>
+                    <div className="search-placeholder">Searching.....</div>
                     : this.state.character.map((person, index) => {
                         return (
                             <Character
