@@ -1,0 +1,6 @@
+.favorites-container {
+    background-color: rgba(208, 240, 187, 0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
