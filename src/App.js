@@ -25,12 +25,23 @@ class App extends Component {
       .catch(err => console.log(`Error: ${err.message}`))
   }
 
+  editCharacterName = (id, updatedName) => {
+    axios.put(`/api/favorite-character/${id}`, { name: updatedName })
+      .then(res => this.setState({ favoriteCharacters: res.data }))
+      .catch(err => console.log(`Error: ${err.message}`));
+  }
+
+
+  //TODO 
+  //Handle Delete
   render() {
     return (
       <div className="App">
         <Header />
         <Search add={this.addCharacter} />
-        <Favorites favorites={this.state.favoriteCharacters} />
+        <Favorites
+          favorites={this.state.favoriteCharacters}
+          edit={this.editCharacterName} />
       </div>
     );
   }

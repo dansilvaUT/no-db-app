@@ -8,10 +8,10 @@ const Favorites = props => {
                     <Favorite
                         key={index}
                         person={person}
+                        edit={props.edit}
                     />
                 )
             })}
-
         </section>
     )
 }

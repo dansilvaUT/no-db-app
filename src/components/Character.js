@@ -11,6 +11,7 @@ class Character extends Component {
 
         this.props.add(character);
     }
+
     render() {
         return (
             <section>
