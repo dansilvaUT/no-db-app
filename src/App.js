@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import { Component } from 'react';
+import Header from './components/Header';
+import Search from './components/Search';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      favoriteCharacters: []
+    }
+  }
+
+  // componentDidMount() {
+  //   axios.get('/api/favorite-character')
+  //   .then(res=> this.setState({favoritecharacters}))
+  // }
+
+  addCharacter = character => {
+    axios.post('/api/favorite-character', { character: character })
+      .then(res => this.setState({ favoriteCharacters: res.data }))
+      .catch(err => console.log(`Error: ${err.message}`))
+  }
+
+  render() {
+    console.log(this.state.favoriteCharacters)
+    return (
+      <div className="App">
+        <Header />
+        <Search add={this.addCharacter} />
+      </div>
+    );
+  }
+
 }
 
 export default App;

@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*CHARACTER STYLES*/
+.character-image {
+  height: 500px;
+  width: 500px;
+}
