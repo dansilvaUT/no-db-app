@@ -4,6 +4,9 @@
 
 h2 {
     text-transform: uppercase;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 .character-image {
@@ -15,6 +18,7 @@ h2 {
 .character-properties h5 {
     display: inline-block;
     margin: 15px 5px;
+    color: white;
 }
 
   .add-character {
