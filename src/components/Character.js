@@ -5,7 +5,8 @@ class Character extends Component {
         const { person } = this.props;
         let character = {
             name: person.name,
-            image: person.img
+            image: person.img,
+            status: person.status
         }
 
         this.props.add(character);

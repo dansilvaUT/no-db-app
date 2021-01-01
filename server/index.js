@@ -13,5 +13,6 @@ app.get('/api/get-character', charCtlr.getCharacter);
 
 //My character controllers
 app.post('/api/favorite-character', myCharCtlr.addCharacter);
+app.get('/api/favorite-character', myCharCtlr.getCharacters);
 //Listen for changes
 app.listen(port, () => console.log(`Listening for changes on ${port}`));
