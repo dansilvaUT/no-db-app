@@ -6,7 +6,8 @@ class Search extends Component {
     constructor() {
         super();
         this.state = {
-            character: []
+            character: [],
+            isLoading: true
         }
     }
 
@@ -16,24 +17,35 @@ class Search extends Component {
 
     getCharacter = () => {
         axios.get('/api/get-character')
-            .then(res => this.setState({ character: res.data[0] }))
+            .then(res => this.setState({ character: res.data[0], isLoading: false }))
             .catch(err => console.log(`Error: ${err.message}`));
     }
 
     render() {
         return (
             <section>
-                {this.state.character.map((person, index) => {
-                    return (
-                        <Character
-                            key={index}
-                            person={person}
-                            add={this.props.add}
-                        />)
-                })}
+                {this.state.isLoading ?
+                    <div>Searching.....</div>
+                    : this.state.character.map((person, index) => {
+                        return (
+                            <Character
+                                key={index}
+                                person={person}
+                                add={this.props.add}
+                            />)
+                    })}
             </section>
         )
     }
 }
 
 export default Search;
+
+// this.state.isLoading ? this.state.character.map((person, index) => {
+//     return (
+//         <Character
+//             key={index}
+//             person={person}
+//             add={this.props.add}
+//         />)
+// }) 

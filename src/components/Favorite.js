@@ -26,8 +26,10 @@ class Favorite extends Component {
         this.toggleEdit();
     }
 
+    deleteCharacter = id => {
+        this.props.delete(id);
+    }
 
-    //TODO Handle Delete 
     render() {
         const { person } = this.props;
         return (
@@ -42,7 +44,7 @@ class Favorite extends Component {
                     </section>)
                     : (<section>
                         <button onClick={this.toggleEdit}>Edit Name</button>
-                        <button>Delete from Favorites</button>
+                        <button onClick={() => this.deleteCharacter(person.id)}>Delete from Favorites</button>
                     </section>)}
             </section>
         )

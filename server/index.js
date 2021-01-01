@@ -15,5 +15,7 @@ app.get('/api/get-character', charCtlr.getCharacter);
 app.post('/api/favorite-character', myCharCtlr.addCharacter);
 app.get('/api/favorite-character', myCharCtlr.getCharacters);
 app.put('/api/favorite-character/:id', myCharCtlr.editCharacter);
+app.delete('/api/favorite-character/:id', myCharCtlr.deleteCharacter);
+
 //Listen for changes
 app.listen(port, () => console.log(`Listening for changes on ${port}`));

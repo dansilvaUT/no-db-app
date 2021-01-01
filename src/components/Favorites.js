@@ -9,6 +9,7 @@ const Favorites = props => {
                         key={index}
                         person={person}
                         edit={props.edit}
+                        delete={props.delete}
                     />
                 )
             })}
