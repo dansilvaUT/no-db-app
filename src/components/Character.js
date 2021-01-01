@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import './Character.css';
 
 class Character extends Component {
     addCharacter = () => {
@@ -14,12 +15,16 @@ class Character extends Component {
 
     render() {
         return (
-            <section>
-                <h3>{this.props.person.name}</h3>
+            <section className="character-container">
+                <h2>{this.props.person.name}</h2>
                 <img src={this.props.person.img} alt={this.props.person.name} className="character-image" />
-                <h5>Nickname: <span>{this.props.person.nickname}</span></h5>
-                <h5>Status: <span>{this.props.person.status}</span></h5>
-                <button onClick={this.addCharacter}>Add to Favorites</button>
+                <div className="character-properties">
+                    <h5>Nickname: <span>{this.props.person.nickname}</span></h5>
+                    <h5>Status: <span className={this.props.person.status === 'Deceased' ? "deceased" : "alive"}>
+                        {this.props.person.status}</span>
+                    </h5>
+                </div>
+                <button className="add-character" onClick={this.addCharacter}>Add to Favorites</button>
             </section>
         )
     }

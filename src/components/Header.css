@@ -1,0 +1,11 @@
+.app-header {
+    background: white url('https://cutewallpaper.org/21/breaking-bad-desktop-background/Breaking-Bad-wallpapers-2560x1440-desktop-backgrounds.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 50px;
+    padding: 25px 20px;
+    border-radius: 10px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
