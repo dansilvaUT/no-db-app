@@ -21,15 +21,18 @@ h2 {
     color: white;
 }
 
-  .add-character {
+  .add-character,
+  .next-btn {
       border-style: none;
       border-radius: 10px;
       font-weight: bold;
       padding: 12px;
       background-color: rgb(192, 185, 118);
+      margin: 5px;
   }
 
-  .add-character:hover {
+  .add-character:hover,
+  .next-btn:hover {
     background-color: rgba(0, 128, 128, .6);
     color: white;
   }

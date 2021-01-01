@@ -25,6 +25,7 @@ class Character extends Component {
                     </h5>
                 </div>
                 <button className="add-character" onClick={this.addCharacter}>Add to Favorites</button>
+                <button className="next-btn" onClick={() => this.props.get()}>Next Character</button>
             </section>
         )
     }

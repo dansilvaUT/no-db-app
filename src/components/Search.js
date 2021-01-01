@@ -33,6 +33,7 @@ class Search extends Component {
                                 key={index}
                                 person={person}
                                 add={this.props.add}
+                                get={this.getCharacter}
                             />)
                     })}
             </section>
@@ -41,12 +42,3 @@ class Search extends Component {
 }
 
 export default Search;
-
-// this.state.isLoading ? this.state.character.map((person, index) => {
-//     return (
-//         <Character
-//             key={index}
-//             person={person}
-//             add={this.props.add}
-//         />)
-// }) 
