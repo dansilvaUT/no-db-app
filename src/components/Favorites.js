@@ -2,7 +2,6 @@ import Favorite from './Favorite';
 import './Favorites.css';
 
 const Favorites = props => {
-    console.log(props)
     return (
         <section>
             {props.favorites.length === 0 ? <div></div>
