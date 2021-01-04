@@ -25,8 +25,8 @@ class App extends Component {
       .catch(err => console.log(`Error: ${err.message}`))
   }
 
-  editCharacterName = (id, updatedName) => {
-    axios.put(`/api/favorite-character/${id}`, { name: updatedName })
+  editCharacterName = (id, newImage) => {
+    axios.put(`/api/favorite-character/${id}`, { image: newImage })
       .then(res => this.setState({ favoriteCharacters: res.data }))
       .catch(err => console.log(`Error: ${err.message}`));
   }

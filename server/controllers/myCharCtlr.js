@@ -18,11 +18,11 @@ module.exports = {
 
     editCharacter: (req, res) => {
         const { id } = req.params;
-        const { name } = req.body;
+        const { image } = req.body;
 
         //ASK Q WHY this breaks when use the {} in the conditional
         let character = favoriteCharacters.find(favorite => favorite.id === + id);
-        character.name = name;
+        character.image = image;
         res.status(200).send(favoriteCharacters)
     },
 
