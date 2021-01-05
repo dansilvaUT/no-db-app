@@ -21,6 +21,10 @@ h2 {
     color: white;
 }
 
+.character-properties h4 {
+  color: white;
+}
+
   .add-character,
   .next-btn {
       border-style: none;
@@ -51,3 +55,10 @@ h2 {
     color: white;
     border-radius: 10px;
   }
+
+  .season-list {
+    color: white;
+    list-style: none;
+    padding: 0;
+  }
+
