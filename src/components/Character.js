@@ -25,9 +25,13 @@ class Character extends Component {
                     </h5>
                     <h4>Appearances:</h4>
                     <ul className="season-list">
-                        {this.props.person.appearance.map((season, index)=>(
-                            <li key={index}>Season - {season}</li>
-                        ))}
+                        {this.props.person.appearance !== null
+                            ?
+                            this.props.person.appearance.map((season, index) => (
+                                <li key={index}>Season - {season}</li>
+                            ))
+                            :
+                            <p>This character only has appearances in Better Call Saul Series</p>}
                     </ul>
                 </div>
                 <button className="add-character" onClick={this.addCharacter}>Add to Favorites</button>
